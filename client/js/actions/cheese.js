@@ -20,7 +20,7 @@ export const fetchCheesesError = (error) => ({
 export const FETCH_CHEESES = 'FETCH_CHEESES';
 export const fetchCheeses = () => dispatch => {
     dispatch(fetchCheesesRequest());
-  return fetch('https://localhost:8080/cheeses').then(response => {
+  return fetch('/cheeses').then(response => {
     if (!response.ok) {
       throw new Error(response.statusText);
     }
