@@ -9,6 +9,7 @@ export class CheeseList extends React.Component {
     }
     componentDidMount () {
       this.props.dispatch(actions.fetchCheeses());
+
     }
 
     // const cheeses = this.props.cheese.map((cheese, index) => {
@@ -17,6 +18,7 @@ export class CheeseList extends React.Component {
 
   render() {
     const cheeses = this.props.cheeses.map((cheese, index) => {
+        console.log('cheese.map');
         return <li key={index}>{cheese}</li>
     });
     return (
